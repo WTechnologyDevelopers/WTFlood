@@ -17,7 +17,8 @@ The installation process should be fairly simple, just download the package from
 ### wget installation
 if you have wget package installed on your system, then use this installation method:
 ```bash
-$ wget https://github.com/WTechnologyDevelopers/WTFlood/archive/refs/heads/master.zip | unzip master.zip
+$ wget https://github.com/WTechnologyDevelopers/WTFlood/archive/refs/heads/master.zip
+$ unzip master.zip
 $ cd WTFlood-master/
 $ bash install.sh
 ```
@@ -25,7 +26,8 @@ $ bash install.sh
 ### curl installation
 if you have curl package installed on your system, then use this installation method:
 ```bash
-$ curl https://github.com/WTechnologyDevelopers/WTFlood/archive/refs/heads/master.zip | unzip master.zip
+$ curl https://github.com/WTechnologyDevelopers/WTFlood/archive/refs/heads/master.zip
+$ unzip master.zip
 $ cd WTFlood-master/
 $ bash install.sh
 ```
