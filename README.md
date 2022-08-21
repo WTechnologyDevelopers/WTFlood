@@ -20,7 +20,7 @@ if you have wget package installed on your system, then use this installation me
 $ wget https://github.com/WTechnologyDevelopers/WTFlood/archive/refs/heads/master.zip
 $ unzip master.zip
 $ cd WTFlood-master/
-$ bash install.sh
+$ sudo bash install.sh
 ```
 
 ### curl installation
@@ -29,7 +29,7 @@ if you have curl package installed on your system, then use this installation me
 $ curl https://github.com/WTechnologyDevelopers/WTFlood/archive/refs/heads/master.zip
 $ unzip master.zip
 $ cd WTFlood-master/
-$ bash install.sh
+$ sudo bash install.sh
 ```
 
 ## Usage Example
