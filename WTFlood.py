@@ -1,4 +1,22 @@
 #!/usr/bin/env python3
+"""
+ __          _________ ______ _                 _
+ \ \        / /__   __|  ____| |               | |
+  \ \  /\  / /   | |  | |__  | | ___   ___   __| |
+   \ \/  \/ /    | |  |  __| | |/ _ \ / _ \ / _` |
+    \  /\  /     | |  | |    | | (_) | (_) | (_| |
+     \/  \/      |_|  |_|    |_|\___/ \___/ \__,_|
+
+WTFlood is network testing tool which floods the network
+with random network traffic from different mac addresses
+which is designed for overflowing the CEM chip in a switch
+on the network. "WTFlood" is meant as a network testing
+tool any improper use of the program is not condoned by
+WTechnology and it's developers! "WTFlood" is created by
+WTechnology under Creative Commons Attribution 4.0
+International license CC2022.
+"""
+
 import sys
 try:
 	import os.path
@@ -38,7 +56,7 @@ def Send_Packages(package_list, interface=None, verbose_bool=False):
 	except Exception as Error:
 		print("Encountered an error while sending network packages.\nError: - {0}".format(Error))
 
-__version__ = "0.2.0.2A"
+__version__ = "0.3.0.0A"
 
 if __name__ == "__main__":
 	Parser = argparse.ArgumentParser(

@@ -3,6 +3,9 @@ WTFlood is a network tool designed to testing networks against MAC-Flooding Atta
 stream of random network data from random IP Addresses, and with random MAC Addresses to force the target switch to fill it's 
 MAC Address Table to the memory limit, to force the switch to send all the network traffic over all it's interfaces.
 
+WTFlood uses a burst of a select numbers of network packets to fill the CEM buffer on the switch, the number of packets generated
+between each burst will determine the time between each burst.
+
 ### Disclaimer
 WTechnology as a company and it's developers are not responsible for any misuse of the "WTFlood" network tool. The "WTFlood" network tool
 is designed for the purpose of testing your **OWN** network!
@@ -15,6 +18,7 @@ The installation process should be fairly simple, just download the package from
 if you have wget package installed on your system, then use this installation method:
 ```bash
 $ wget https://github.com/WTechnologyDevelopers/WTFlood/archive/refs/heads/master.zip | unzip master.zip
+$ cd WTFlood-master/
 $ bash install.sh
 ```
 
@@ -22,6 +26,7 @@ $ bash install.sh
 if you have curl package installed on your system, then use this installation method:
 ```bash
 $ curl https://github.com/WTechnologyDevelopers/WTFlood/archive/refs/heads/master.zip | unzip master.zip
+$ cd WTFlood-master/
 $ bash install.sh
 ```
 
