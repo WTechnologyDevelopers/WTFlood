@@ -28,8 +28,17 @@ except ImportError as Error:
 	sys.exit(1)
 
 """
-Gets the state of the selected interface.
-returns either 0,1 or null.
+Gets the state of the selected network interface.
+
+This function looks at the "operatestate" file of
+the given network interface for the given network
+interface which returns a boolan value to indicate
+if the network interface is in use.
+
+:param string Interface: The name of the interface to check.
+:returns: A boolan value of the interface operation state.
+:rtype: bool
+:raises Error: If any general error happens.
 """
 def Get_Interface_State(Interface):
         try:
@@ -43,8 +52,17 @@ def Get_Interface_State(Interface):
                 return "NULL"
 
 """
-Generates a list of random network packages
-retruns package list with length of "Number"
+Generates a list of random network packages.
+
+This function generates a list of network packages
+with random mac addresses, and random ip addresses,
+and returns it, the defualt number of packages is
+2048.
+
+:param int Number: The number of packages to generate.
+:returns: A list of Scapy network package.
+:rtype: list
+:raises Error: If any general errors happens.
 """
 def Generate_Packages(Number=2048):
 	Package_list = []
@@ -55,6 +73,15 @@ def Generate_Packages(Number=2048):
 
 """
 Sends packages based on a list of packages.
+
+This function uses the "sendp" function from scapy library
+to circle through a list of pregenerated packages, to send
+these packages out of a network interface.
+
+:param list package_list: List of packages to send.
+:param string interface: The name of the network interface to use.
+:param bool verbose_bool: A boolan value to toggle verbose logging mode.
+:raises Error: If anything happens.
 """
 def Send_Packages(package_list, interface=None, verbose_bool=False):
 	try:
@@ -67,7 +94,7 @@ def Send_Packages(package_list, interface=None, verbose_bool=False):
 	except Exception as Error:
 		print("Encountered an error while sending network packages.\nError: - {0}".format(Error))
 
-__version__ = "0.3.0.0A"
+__version__ = "0.4.0.0A"
 
 if __name__ == "__main__":
 	Parser = argparse.ArgumentParser(
