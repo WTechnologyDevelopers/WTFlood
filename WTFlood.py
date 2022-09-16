@@ -27,6 +27,10 @@ except ImportError as Error:
 	print("Please check if needed libararies are installed, or run the installer once more.")
 	sys.exit(1)
 
+"""
+Gets the state of the selected interface.
+returns either 0,1 or null.
+"""
 def Get_Interface_State(Interface):
         try:
                 if os.path.exists("/sys/class/net/" + Interface + "/"):
@@ -38,6 +42,10 @@ def Get_Interface_State(Interface):
                 print("Error - {0}".format(Error))
                 return "NULL"
 
+"""
+Generates a list of random network packages
+retruns package list with length of "Number"
+"""
 def Generate_Packages(Number=2048):
 	Package_list = []
 	for i in range(0,Number):
@@ -45,6 +53,9 @@ def Generate_Packages(Number=2048):
 		Package_list.append(packet)
 	return Package_list
 
+"""
+Sends packages based on a list of packages.
+"""
 def Send_Packages(package_list, interface=None, verbose_bool=False):
 	try:
 		if verbose_bool:
@@ -102,7 +113,7 @@ if __name__ == "__main__":
 
 			if PackageSize is not None:
 				try:
-					NetworkPackages = Generate_Packages(PackageSize)
+					NetworkPackages = Generate_Packages(int(PackageSize))
 				except Exception as Error:
 					print("Encounted a error while generated network packages. Error - {0}".format(Error))
 			else:
