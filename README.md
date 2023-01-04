@@ -1,4 +1,6 @@
 ## Introduction
+![CodeSizeBadge](https://img.shields.io/github/languages/code-size/WTechnologyDevelopers/WTFlood) ![IssuesCount](https://img.shields.io/github/issues/WTechnologyDevelopers/WTFlood) ![License](https://img.shields.io/github/license/WTechnologyDevelopers/WTFlood)
+
 WTFlood is a network tool designed to testing networks against MAC-Flooding Attack / CEM Overflow Attack. The tool sends a constant
 stream of random network data from random IP Addresses, and with random MAC Addresses to force the target switch to fill it's 
 MAC Address Table to the memory limit, to force the switch to send all the network traffic over all it's interfaces.
